@@ -1,0 +1,230 @@
+# Path to your oh-my-zsh configuration.
+ZSH=$HOME/.oh-my-zsh
+
+# Set name of the theme to load.
+# Look in ~/.oh-my-zsh/themes/
+# Optionally, if you set this to "random", it'll load a random theme each
+# time that oh-my-zsh is loaded.
+ZSH_THEME="robbyrussell"
+
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# Set to this to use case-sensitive completion
+# CASE_SENSITIVE="true"
+
+# Uncomment this to disable bi-weekly auto-update checks
+# DISABLE_AUTO_UPDATE="true"
+
+# Uncomment to change how often before auto-updates occur? (in days)
+# export UPDATE_ZSH_DAYS=13
+
+# Uncomment following line if you want to disable colors in ls
+# DISABLE_LS_COLORS="true"
+
+# Uncomment following line if you want to disable autosetting terminal title.
+# DISABLE_AUTO_TITLE="true"
+
+# Uncomment following line if you want to disable command autocorrection
+# DISABLE_CORRECTION="true"
+
+# Uncomment following line if you want red dots to be displayed while waiting for completion
+# COMPLETION_WAITING_DOTS="true"
+
+# Uncomment following line if you want to disable marking untracked files under
+# VCS as dirty. This makes repository status check for large repositories much,
+# much faster.
+# DISABLE_UNTRACKED_FILES_DIRTY="true"
+
+# Uncomment following line if you want to  shown in the command execution time stamp 
+# in the history command output. The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|
+# yyyy-mm-dd
+# HIST_STAMPS="mm/dd/yyyy"
+
+# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+plugins=(git git-extras github svn git-prompt git-remote-branch sudo urltools jump git-flow history dirhistory history-substring-search)
+
+source $ZSH/oh-my-zsh.sh
+
+# User configuration
+
+export PATH=$HOME/bin:/usr/local/bin:$PATH
+# export MANPATH="/usr/local/man:$MANPATH"
+
+# # Preferred editor for local and remote sessions
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='mvim'
+# fi
+
+# Compilation flags
+# export ARCHFLAGS="-arch x86_64"
+
+# ssh
+# export SSH_KEY_PATH="~/.ssh/dsa_id"
+
+
+export PATH="/home/mars/CodeSourcery/Sourcery_G++_Lite/bin:$PATH"
+export PATH="/opt/mv_pro_5.0/montavista/pro/devkit/arm/v5t_le/bin:
+/opt/mv_pro_5.0/montavista/pro/bin:
+/opt/mv_pro_5.0/montavista/common/bin:$PATH"
+
+
+
+
+#export PATH="~/Qt5.1.0/5.1.0/gcc/bin:$PATH"
+export PATH="~/Qt5.3.0/5.3/gcc/bin:$PATH"
+
+export PATH="/home/mars/mxe/mxe/usr/bin:$PATH"
+
+export PATH="/home/mars/ACHIVE/vlc-qt/build/prefix/lib:$PATH"
+
+export PATH="/usr/local/Trolltech/Qt-4.8.6/bin:$PATH"
+
+alias ww='cd ~/IPNC3.0'
+alias tt='telnet 192.168.1.168'
+alias ff='cd ~/testproc/'
+alias D='cd ~/Downloads/'
+alias gg='cd ~/goagent/local/; python proxy.py'
+alias svim='sudo vim'
+
+#C_INCLUDE_PATH="/home/mars/IPNC3.0/dvsdk_ipnctools/dm365_codecs/packages:$C_INCLUDE_PATH"
+#C_INCLUDE_PATH="/home/mars/IPNC3.0/dvsdk_ipnctools/dm365_codecs/packages/ti/sdo/codecs/h264enc:$C_INCLUDE_PATH"
+#/home/mars/IPNC3.0/dvsdk_ipnctools/dm365_codecs/packages/ti/sdo/codecs/h264dec
+#export C_INCLUDE_PATH
+
+C_INCLUDE_PATH="/home/mars/ACHIVE/apue/apue.2e/lib/":$C_INCLUDE_PATH
+C_INCLUDE_PATH="/home/mars/ACHIVE/apue/apue.2e/include/":$C_INCLUDE_PATH
+C_INCLUDE_PATH="/home/mars/ACHIVE/jthread-1.3.1_arm/src/":$C_INCLUDE_PATH
+export C_INCLUDE_PATH
+
+CXX_INCLUDE_PATH="/home/mars/ACHIVE/jthread-1.3.1_arm/src/":$CXX_INCLUDE_PATH
+export CXX_INCLUDE_PATH
+
+
+man() {
+    env \
+        LESS_TERMCAP_mb=$(printf "\e[1;31m") \
+        LESS_TERMCAP_md=$(printf "\e[1;31m") \
+        LESS_TERMCAP_me=$(printf "\e[0m") \
+        LESS_TERMCAP_se=$(printf "\e[0m") \
+        LESS_TERMCAP_so=$(printf "\e[1;44;33m") \
+        LESS_TERMCAP_ue=$(printf "\e[0m") \
+        LESS_TERMCAP_us=$(printf "\e[1;32m") \
+        man "$@"
+}
+
+tdir='/home/mars/IPNC3.0/ipnc_rdk/tftp/'
+export tdir
+
+alias tf='cd ~/IPNC3.0/ipnc_rdk/tftp/'
+
+alias vv='cd ~/.vim/bundle/'
+alias mm='cd ~/SMK/'
+alias hh='cd ~/mngTmp/con_org/'
+
+#function git_prompt_info() {
+#ref=$(git symbolic-ref HEAD 2> /dev/null) || return
+#echo "$ZSH_THEME_GIT_PROMPT_PREFIX${ref#refs/heads/}$ZSH_THEME_GIT_PROMPT_SUFFIX"
+#}
+#
+#for burn files
+#sfh() {
+#    sudo ./sfh_DM36x.exe $* -p /dev/ttyUSB0
+#}
+#
+#erase_nand_sfh() {
+#    sudo ~/low_work/APPRO/dm36x/sfh_DM36x.exe -nanderase -p /dev/ttyUSB0                                                                                                   
+#}
+#
+#flash_nand_sfh() {
+#    sudo ~/low_work/APPRO/dm36x/sfh_DM36x.exe -nandflash ~/low_work/DaVinci-PSP-SDK-03.21.00.04/images/boot-strap/serial_flash/dm36x/ubl_DM36x_ARM432_DDR340_OSC24_NAND.bin ~/low_work/DaVinci-PSP-SDK-03.21.00.04/images/u-boot/dm36x/u-boot.bin -p /dev/ttyUSB0
+#}
+#
+#ef_sfh() {
+#    while 1 ; do
+#        erase_nand_sfh 
+#        if [ $? -eq 0 ] ; then
+#            sleep 1
+#            flash_nand_sfh
+#            if [ $? -eq 0 ] ; then
+#                break;
+#            fi
+#        fi
+#    done
+#
+#}
+#
+alias wcase='python3 /usr/local/sbin/wecase &'
+alias pp='cd ~/Qt_proj/'
+alias n='nautilus'
+
+
+alias qmake_win='~/mxe/mxe/usr/i686-pc-mingw32.static/qt5/bin/qmake'
+alias m='make'
+alias mc='make clean'
+
+__git_files () { 
+        _wanted files expl 'local files' _files }
+
+
+LD_LIBRARY_PATH=/home/mars/low_work/siptest/lib:$LD_LIBRARY_PATH 
+LD_LIBRARY_PATH=/home/mars/ACHIVE/jthread-1.3.1_arm/src:$LD_LIBRARY_PATH
+LD_LIBRARY_PATH=/home/mars/ACHIVE/vlc-qt/build/prefix/lib:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH
+
+alias gps='git svn dcommit'
+alias c='clear'
+
+alias kk='sudo kermit -c'
+alias armcc="arm-none-linux-gnueabi-"
+
+
+
+#compdef -d git
+
+alias j='jump'
+
+
+alias ycm='cp ~/.vim/dot_ycm_extra_conf.py ./.ycm_extra_conf.py'
+
+alias gdd="git difftool -- \
+    '*.c' '*.cc' '*.cpp' \
+    '*.h' '*.hpp' '*.hh' \
+    '*.sh' '*.py' '*.rb'\
+    'Makefile' 'makefile'\
+    '*.txt' '*.cfg' '*.md' '*.ini' \
+    '*.ui' '*.html' '*.htm' '*.js' '*.vim'"
+
+
+
+
+QT_SELECT="qt5_3"
+#QTTOOLDIR="/home/mars/Qt5.3.0/5.3/gcc/bin"
+#QTLIBDIR="/home/mars/Qt5.3.0/5.3/gcc/lib"
+export QT_SELECT
+#export QTTOOLDIR
+#export QTLIBDIR
+
+alias sort='/usr/bin/sort'
+alias sed='/bin/sed'
+
+
+VLC_PLUGIN_PATH="/home/mars/ACHIVE/libvlc-demos/plugins"
+export VLC_PLUGIN_PATH
+
+alias git='LANG=en_US LC_ALL=en_US.UTF-8 LC_CTYPE=en_US.UTF-8 LANGUAGE=en_US git'
+alias logout='gnome-session-save --force-logout'
+
+
+
+export PAGER="/bin/zsh -c \"unset PAGER;col -b -x | \
+    vim -R -c 'set ft=man nomod nolist' -c 'map q :q<CR>' \
+    -c 'map <SPACE> <C-D>' -c 'map b <C-U>' \
+    -c 'nmap K :man <C-R>=expand(\\\"<cword>\\\")<CR><CR>' -\""
+
+
