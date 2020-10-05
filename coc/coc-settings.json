@@ -42,6 +42,7 @@
     "explorer.previewAction.onHover":false,
     "explorer.file.autoReveal":true,
     "explorer.toggle": true,
+    "explorer.openAction.strategy":"sourceWindow",
     "signature.triggerSignatureWait": 50,
     "diagnostic.refreshAfterSave": true,
     "diagnostic.refreshOnInsertMode": true,
